@@ -15,7 +15,7 @@ namespace Algorithms
             sw.Start();            
              mat.FindItem(Guid.NewGuid().ToString());
             sw.Stop();
-            Console.WriteLine(sw.ElapsedMilliseconds);
+            Console.WriteLine($"Время поиска в массиве:  {sw.ElapsedMilliseconds}");
             Console.ReadKey();
 
             MyHashSet set = new (1000000);
@@ -25,7 +25,7 @@ namespace Algorithms
             sw1.Start();
             set.FindItem(new Data().GetHashCode());
             sw1.Stop();
-            Console.WriteLine(sw1.ElapsedMilliseconds);
+            Console.WriteLine($"Время поиска через HashSet:  {sw1.ElapsedMilliseconds}");
 
         }
     }

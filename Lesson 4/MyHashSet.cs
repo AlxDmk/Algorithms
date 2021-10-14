@@ -8,9 +8,8 @@ namespace Algorithms
 {
     class MyHashSet
     {
-        public int Size { get; set; }
-        HashSet<int> SHashSet { get; set; }
-        
+        public int Size { get; set; }       
+       
 
         public MyHashSet(int size)
         {
@@ -18,30 +17,24 @@ namespace Algorithms
             
         }
 
-        public override bool Equals(object obj)
-        {
-            return base.Equals(obj);
-        }
+        
 
-        public override int GetHashCode()
+        public HashSet<string> Fill()
         {
-            return base.GetHashCode();
-        }
-
-        public void Fill()
-        {
-            
+            HashSet<string> SHashSet = new HashSet<string>();
 
             for (int i = 0; i < Size; i++)
             {
-                int item = new Data().GetHashCode();
-                SHashSet.Add(item);
+                string ie = new Data().GetHashCode().ToString();
+                SHashSet.Add(ie);
             }
+            return SHashSet;
         }
 
         public bool FindItem(int item)
         {
-            return SHashSet.Contains(item) ?true : false;
+            var x = Fill();
+            return x.Contains(item.ToString());
             
         }
     }

@@ -16,8 +16,7 @@ namespace Algorithms
             Size = size;
             
         }
-
-        
+          
 
         public HashSet<string> Fill()
         {
@@ -25,7 +24,8 @@ namespace Algorithms
 
             for (int i = 0; i < Size; i++)
             {
-                string ie = new Data().GetHashCode().ToString();
+                string v = new Data().ToString();
+                string ie = v;
                 SHashSet.Add(ie);
             }
             return SHashSet;

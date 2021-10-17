@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms.Lesson_5
 {
-    class StackG
+    public class StackG:Enumerate
     {
         Node Root;
         public StackG( Node node)
@@ -14,7 +14,7 @@ namespace Algorithms.Lesson_5
             Root = node;  
         }
        
-        private IEnumerable<Node> EnumerateTree()
+        override public IEnumerable<Node> EnumerateTree()
         {
             var stack = new Stack<Node>();
             stack.Push(Root);
@@ -27,17 +27,8 @@ namespace Algorithms.Lesson_5
                 if (n.Right != null) stack.Push(n.Right);
                 if (n.Left != null) stack.Push(n.Left);
                
-
             }
-        }
-
-        public void Print()
-        {
-            EnumerateTree();
-            foreach (var n in EnumerateTree())
-            Console.Write(n.Data + " ");
-
-        }
+        }        
     }
 
 }

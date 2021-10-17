@@ -22,9 +22,12 @@ namespace Algorithms.Lesson_5
             while (stack.Count > 0)
             {
                 var n = stack.Pop();
+                
                 yield return n;
-                if (n.Left != null) stack.Push(n.Left);
                 if (n.Right != null) stack.Push(n.Right);
+                if (n.Left != null) stack.Push(n.Left);
+               
+
             }
         }
 

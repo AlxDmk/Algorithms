@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms.Lesson_5
 {
-    public class QueueG
+    public class QueueG: Enumerate
     {
         public Node Tree { get; set; }
 
@@ -15,7 +15,7 @@ namespace Algorithms.Lesson_5
             Tree = tree;
         }
 
-        private IEnumerable<Node> EnumerateTree()
+        override public  IEnumerable<Node> EnumerateTree()
         {
             Queue<Node> q = new();
             q.Enqueue(Tree);
@@ -36,12 +36,6 @@ namespace Algorithms.Lesson_5
                 }
             }
         }
-        public void Print()
-        {
-            EnumerateTree();
-            foreach (var n in EnumerateTree())
-            Console.Write(n.Data + " ");
-
-        }
+        
     }
 }

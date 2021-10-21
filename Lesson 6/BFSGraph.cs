@@ -34,12 +34,12 @@ namespace Algorithms.Lesson_6
                 Console.WriteLine("Узел № " + start);
 
 
-                foreach (Int32 next in Matrix[start])
+                foreach (int i in Matrix[start])
                 {
-                    if (!visited[next])
+                    if (!visited[i])
                     {
-                        visited[next] = true;
-                        queue.Enqueue(next);
+                        visited[i] = true;
+                        queue.Enqueue(i);
                     }
                 }
 
